@@ -1,0 +1,22 @@
+{
+  "name": "biangbiangcon-character-hacks",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "slidev slides.md --port 3030",
+    "build": "slidev build slides.md",
+    "export": "node export.mjs",
+    "export-notes": "slidev export-notes slides.md --output slides-notes.pdf",
+    "deploy": "npm run build && node -e \"require('node:fs').rmSync('dist/_redirects', { force: true })\" && npx --yes wrangler@4.151.0 deploy"
+  },
+  "devDependencies": {
+    "@fontsource/noto-sans": "5.3.0",
+    "@fontsource/noto-sans-jp": "5.3.1",
+    "@fontsource/noto-sans-sc": "5.3.1",
+    "@fontsource/noto-serif-jp": "5.3.1",
+    "@fontsource/noto-serif-sc": "5.3.0",
+    "@slidev/cli": "53.0.0",
+    "@slidev/theme-default": "0.25.0",
+    "playwright-chromium": "1.64.0"
+  }
+}
